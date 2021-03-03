@@ -1,0 +1,17 @@
+/* Header styles go here */
+h1 {
+    text-align: center;
+    background-color:yellow;
+}
+
+/*Form styles go here */
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.radioButtons {
+    display: flex;
+    flex-direction: row;
+}
