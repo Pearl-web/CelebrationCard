@@ -101,10 +101,14 @@ input[type="submit"]{
   .styling{
       display: flex;
       font-size: 50px;
-      background-color: violet;
-      margin: auto;
+      background-color:blanchedalmond;
+      margin: 50px auto;
       width: 50%;
       justify-content: center;
-      
       height:700px;
+      border-radius: 20px;
+      padding-top:100px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: center;
+      
   }
