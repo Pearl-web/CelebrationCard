@@ -9,15 +9,17 @@
     <title>Celebration Card</title>
 </head>
 <body>
-    <h1>Celebration Card</h1>
-    <form action="">
-        <div class="addGreeting">
-            <label for="greeting">Add greeting:</label>
+    <h1>Create your Card</h1>
+    <form id='form'action="">
+        
+        <div class="border" class="addGreeting">
+            <label for="greeting" class ="heading">Add a greeting:</label>
             <input type="text" id="greeting" name="greeting">
             <br>
         </div>
 
-        <div class ="radioButtons">
+        <div class="border" class ="radioButtons">
+            <p>Select an occasion:</p>
             <label for="birthday">Birthday</label>
             <input type="radio" id="birthday" name="occasion" value="birthday">
             <br>
@@ -29,16 +31,28 @@
             <br>
         </div>
 
-        <div class="addMessage">
-            <label for="message">Message:</label>
+        <div  class="border" class="addMessage">
+            <label for="message" class="heading">Write a message:</label>
             <textarea id="message" name="message" rows="4" cols="50"></textarea>
             <br>
         </div>
 
         <div class="submitButton">
-            <input type="submit" value="Create Card">
+            <input id="submit" type="submit" value="Create Card">
         </div>
+        
     </form>
+    
+
+    <div id="card">
+        
+    </div>
+    <img id = "newImage"></img>
+ 
+    
+
+
+   
     
 </body>
 </html>
