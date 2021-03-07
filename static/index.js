@@ -2,6 +2,9 @@
 
 const form = document.getElementById('form');
 const card = document.getElementById('card');
+const outerCard = document.getElementById('outerCard');
+
+
 const message = document.getElementById("message")
 const greeting= document.getElementById("greeting")
 const header = document.querySelector("h1")
@@ -11,19 +14,37 @@ const imageToDisplay = document.getElementById("newImage")
 
 
 
-form.addEventListener('submit', async (event) => { 
+
+
+  async function changeToCard(event){
+
   event.preventDefault();
-    
+  const response = await fetch(birthdayurl);
+  const data = await response.json()
+  const image = await data.urls.regular
+  imageToDisplay.src= image; 
+  outerCard.classList.add('outerStyling')
   card.classList.add('styling')
+  imageToDisplay.classList.add('newImage')
+
   card.innerHTML = `${greeting.value} <br> ${message.value}`;
   form.remove()
   header.remove()
-  let randomImage = await getNewImage();
-  imageToDisplay.src= randomImage;
   
+  
+};
 
 
-});
+form.addEventListener('submit', changeToCard)
+
+ // async function getNewImage(){
+  //   return fetch(birthdayurl)
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     return data.urls.thumb
+  //   })
+  // };
+
 
 
 
@@ -48,10 +69,10 @@ form.addEventListener('submit', async (event) => {
 
 
 
-  async function getNewImage(){
-    return fetch(birthdayurl)
-    .then(response => response.json())
-    .then(data => {
-      return data.urls.thumb
-    })
-  };
+  // async function getNewImage(){
+  //   return fetch(birthdayurl)
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     return data.urls.thumb
+  //   })
+  // };
