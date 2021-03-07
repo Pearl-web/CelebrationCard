@@ -9,8 +9,26 @@ const message = document.getElementById("message")
 const greeting= document.getElementById("greeting")
 const header = document.querySelector("h1")
 const imageToDisplay = document.getElementById("newImage")
+const birthday = document.getElementById("birthday")
+const wedding = document.getElementById("wedding")
+const anniversary = document.getElementById("anniversary")
+
+let url = 'https://api.unsplash.com/photos/random?client_id=zxe87r8bnEWufIZGacW_9OUU_d2e1afypUiC6KVE9OQ&query="birthdaycake"'
 
 
+
+
+// // if (birthday is selected) {
+//   url = 'https://api.unsplash.com/photos/random?client_id=zxe87r8bnEWufIZGacW_9OUU_d2e1afypUiC6KVE9OQ&query="birthdaycake"'
+
+// } else if (wedding is selected ) {
+//   url = 'https://api.unsplash.com/photos/random?client_id=zxe87r8bnEWufIZGacW_9OUU_d2e1afypUiC6KVE9OQ&query="wedding"'
+// }
+
+// else {
+
+//   url = 'https://api.unsplash.com/photos/random?client_id=zxe87r8bnEWufIZGacW_9OUU_d2e1afypUiC6KVE9OQ&query="anniversary"'
+// }
 
 
 
@@ -19,7 +37,7 @@ const imageToDisplay = document.getElementById("newImage")
   async function changeToCard(event){
 
   event.preventDefault();
-  const response = await fetch(birthdayurl);
+  const response = await fetch(url);
   const data = await response.json()
   const image = await data.urls.regular
   imageToDisplay.src= image; 
